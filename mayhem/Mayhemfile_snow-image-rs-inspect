@@ -1,0 +1,9 @@
+project: savantenvs/snow-apps
+target: snow-image-rs-inspect
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snow-image-rs-inspect/testsuite
+cmds:
+  - cmd: /mayhem/snow_image_rs_inspect
+    libfuzzer: true
+    timeout: 10
